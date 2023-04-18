@@ -9,7 +9,7 @@ import random
 ouput_file = 'ratings.csv'
 f2 = open(ouput_file, 'w', encoding='utf-8')
 
-f2.write('id, user_id, restaurant_id, total_rating, food_rating, service_rating, ambience_rating\n')
+f2.write('id,user_id,restaurant_id,total_rating,food_rating,service_rating,ambience_rating\n')
 
 for i in range(1, 100000):
    user_id = random.randint(1, 50000)

@@ -1,4 +1,4 @@
-id, name, fullAddress, priceRange, zipCode
+id,name,fullAddress,priceRange,zipCode
 1,PJ Fresh (224 Daniel Payne Drive),"224 Daniel Payne Drive, Birmingham, AL, 35207",$,35207
 2,J' ti`'z Smoothie-N-Coffee Bar,"1521 Pinson Valley Parkway, Birmingham, AL, 35217",,35217
 3,Philly Fresh Cheesesteaks (541-B Graymont Ave),"541-B Graymont Ave, Birmingham, AL, 35204",$,35204

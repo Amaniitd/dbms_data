@@ -15,8 +15,8 @@ f3 = open(output_cuisines, 'w', encoding='utf-8')
 id = 0
 for line in f1:
    if id == 0:
-      rest_line = "id, name, fullAddress, priceRange, zipCode"
-      cuis_line = "restaurant_id, cuisine_type"
+      rest_line = "id,name,fullAddress,priceRange,zipCode"
+      cuis_line = "restaurant_id,cuisine_type"
       f2.write(rest_line)
       f3.write(cuis_line)
    else:
@@ -52,6 +52,8 @@ for line in f1:
          elif line[5][i] == ',':
             cuis_lines += s + "\n"
             s = line[0] + ","
+         elif line[5][i] == ' ' and line[5][i-1] == ',':
+            continue
          else:
             s += line[5][i]
 

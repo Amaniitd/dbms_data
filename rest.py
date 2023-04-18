@@ -44,7 +44,18 @@ for line in f1:
             line.append("")
       rest_line = [line[0], line[2], line[7], line[6], line[8]]
       # cuis_line: 0, 5
-      cuis_line = [line[0], line[5]]
+      cuis_lines = ""
+      s = line[0] + ","
+      for i in range(1, len(line[5]) - 1):
+         if i == len(line[5]) - 2:
+            cuis_lines += s
+         elif line[5][i] == ',':
+            cuis_lines += s + "\n"
+            s = line[0] + ","
+         else:
+            s += line[5][i]
+
+
       # write to restaurants.csv
       s = ""
       for item in rest_line:
@@ -52,11 +63,7 @@ for line in f1:
       s = s[:-1]
       f2.write(s)
       # write to cuisines.csv
-      s = ""
-      for item in cuis_line:
-         s += item + ","
-      s = s[:-1]
-      f3.write(s)
+      f3.write(cuis_lines)
    id += 1
    f2.write("\n")
    f3.write("\n")
